@@ -186,7 +186,7 @@
             "spouse": null,
             "gender": "Female",
             "district" :"Matara",
-	        "hobby" : "Reading Book",
+	        "hobby" : "Reading books",
 	        "movie" : "English"
         },
         {
@@ -276,7 +276,7 @@
             "spouse": null,
             "gender": "Female",
             "district" :"Gampaha",
-	        "hobby" : "Reading Book",
+	        "hobby" : "Reading books",
 	        "movie" : "Tamil"
         },
         {
