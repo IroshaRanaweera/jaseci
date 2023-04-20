@@ -275,3 +275,28 @@ walker number_of_students{
         report student;
         }
 }
+walker number_of_engineers{
+    // returns the upcoming birthdays of the family
+    has ENGINEERS = [];
+    has AREA = [];
+    has ENG_dict = {};
+    
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        if (!here.deceased){
+            if (here.profession == "Electrical Engineer"){
+             ENGINEERS.l::append([here.name]);
+             AREA.l::append([here.district]);
+             }
+        }
+    }
+    with exit {
+        ENG_dict["Engineer list"]=ENGINEERS;
+        ENG_dict["area"]=AREA;
+        std.out(ENG_dict);
+        report ENGINEERS;
+        report AREA;
+        }
+}
