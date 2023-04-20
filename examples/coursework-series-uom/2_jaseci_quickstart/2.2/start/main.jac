@@ -91,6 +91,8 @@ walker find_interest_in_Movies {
     has c =0;
     has count=0;
     has i =0;
+    has max_num_of_Watch =0;
+    has list_lenght =0;
 
     root: take-->node::family_root;
     family_root: take-->node::person;
@@ -104,7 +106,7 @@ walker find_interest_in_Movies {
             if (Movie_type in Movie_set):c=c+1;
             else:Movie_set.l::append(Movie_type);
         }
-        
+      
         for Movie in Movie_set{
             sub_list=[];
             i=0;
@@ -115,13 +117,23 @@ walker find_interest_in_Movies {
                 i=i+1;
 
             }
+            
+            list_lenght = 0;
+            for j in sub_list{
+                list_lenght=list_lenght+1;
+            }
+            
+            if (list_lenght > max_num_of_Watch){
+                max_num_of_Watch = list_lenght;
+            }
             Movie_log[Movie]= sub_list;
 
         }
 
-
+        std.out(max_num_of_Watch);
         std.out(Movie_set);
         std.out(Movie_log);
+        report max_num_of_Watch;
         report Movie_log;
         report Movie_set;
     }
