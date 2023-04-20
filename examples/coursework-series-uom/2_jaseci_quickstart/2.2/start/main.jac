@@ -41,7 +41,7 @@ walker create_familytree {
                 spouse = member["spouse"],
                 district = member["district"],
 	            hobby = member["hobby"],
-                movie =member["movie"],
+                movie =member["movie"]
             );
             famly_members.list::append(family_member);
         }

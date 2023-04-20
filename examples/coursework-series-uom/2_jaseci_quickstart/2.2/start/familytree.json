@@ -1,91 +1,429 @@
 {
     "families": [
         {
-            "family_name": "Irugalbandara",
+            "family_name": "Ranaweera",
             "id": "0x1"
         },
         {
-            "family_name": "Jayalath",
+            "family_name": "Rupasinghe",
             "id": "0x2"
+        },
+        {
+            "family_name": "Sooriyabandara",
+            "id": "0x3"
+        },
+        {
+            "family_name": "Abeysundara",
+            "id": "0x4"
+        },
+        {
+            "family_name": "Sudasinghe",
+            "id": "0x5"
+        },
+        {
+            "family_name": "Wickramasinghe",
+            "id": "0x6"
+        },
+        {
+            "family_name": "Pathirana",
+            "id": "0x7"
+        },
+        {
+            "family_name": "Yapa Abeywardhana",
+            "id": "0x8"
+        },
+        {
+            "family_name": "Rodrigo",
+            "id": "0x9"
+        },
+        {
+            "family_name": "De Silva",
+            "id": "0x10"
         }
     ],
     "members": [
         {
             "uid": "0x1",
             "family_id": "0x1",
-            "name": "Chandra Irugalbandara",
-            "date_of_birth": "1996-02-10",
-            "profession": "Machine Learning Engineer",
-            "parents": {
-                "father": "0x2",
-                "mother": "0x3"
-            },
+            "name": "Saman Ranaweera",
+            "date_of_birth": "1963-11-15",
+            "profession": "Retied Air Force Officer",
+            "parents": null,
+            "children": [
+                "0x3",
+                "0x4"
+            ],
             "deceased": false,
-            "children": [],
-            "spouse": null,
-            "gender": "Male"
+            "spouse": "0x2",
+            "gender": "Male",
+            "district" :"Gampaha",
+	        "hobby" : "Gardening",
+	        "movie" : "English"
         },
         {
             "uid": "0x2",
-            "family_id": "0x1",
-            "name": "Sujeewa Rathnakumara",
-            "date_of_birth": "1966-02-10",
-            "profession": "Mechanical Engineer",
-            "parents": null,
-            "deceased": true,
-            "children": [
-                "0x1",
-                "ox4",
-                "0x5"
-            ],
-            "spouse": "0x3",
-            "gender": "Male"
-        },
-        {
-            "uid": "0x3",
             "family_id": "0x2",
-            "name": "Damayanthi Manike",
-            "date_of_birth": "1966-02-10",
-            "profession": "Housewife",
+            "name": "Ranjani Rupasinghe",
+            "date_of_birth": "1966-11-03",
+            "profession": "Project Engineer",
             "parents": null,
             "deceased": false,
             "children": [
-                "0x1",
-                "0x4",
-                "0x5"
+                "0x3",
+                "ox4"
             ],
-            "spouse": "0x2",
-            "gender": "Female"
+            "spouse": "0x1",
+            "gender": "Female",
+            "district" :"Gampaha",
+	        "hobby" : "Reading",
+	        "movie" : "Sinhala"
+        },
+        {
+            "uid": "0x3",
+            "family_id": "0x1",
+            "name": "irosha Ranaweera",
+            "date_of_birth": "1997-05-29",
+            "profession": "Electrical Engineer",
+            
+            "deceased": false,
+            "parents": {
+                "father": "0x1",
+                "mother": "0x2"
+            },
+            "children": [],
+            "spouse": null,
+            "gender": "Female",
+            "district" :"Gampaha",
+	        "hobby" : "collecting coins",
+	        "movie" : "Hindi"
         },
         {
             "uid": "0x4",
             "family_id": "0x1",
-            "name": "Vishwa Irugalbandara",
-            "date_of_birth": "1994-03-19",
-            "profession": "Doctor",
+            "name": "Chenara Ranaweera",
+            "date_of_birth": "2008-01-16",
+            "profession": "Student",
             "parents": {
-                "father": "0x2",
-                "mother": "0x3"
+                "father": "0x1",
+                "mother": "0x2"
             },
             "deceased": false,
             "children": [],
             "spouse": null,
-            "gender": "Female"
+            "gender": "Female",
+            "district" :"Gampaha",
+	        "hobby" : "Reading books",
+	        "movie" : "Tamil"
         },
         {
             "uid": "0x5",
-            "family_id": "0x1",
-            "name": "Darsha Irugalbandara",
-            "date_of_birth": "1996-06-23",
-            "profession": "US Coast Guard Office",
+            "family_id": "0x3",
+            "name": "Inosha Sooriyabandara",
+            "date_of_birth": "1997-09-10",
+            "profession": "Electrical Engineer",
             "parents": {
-                "father": "0x2",
-                "mother": "0x3"
+                "father": "0x6",
+                "mother": "0x7"
             },
             "deceased": false,
             "children": [],
             "spouse": null,
-            "gender": "Male"
+            "gender": "Female",
+            "district" :"Matara",
+	        "hobby" : "Watching films",
+	        "movie" : "Tamil"
+        },
+        {
+            "uid": "0x6",
+            "family_id": "0x3",
+            "name": "Chandrawansha Sooriyabandara",
+            "date_of_birth": "1961-08-29",
+            "profession": "Bussinessmen",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x5",
+                "0x8",
+                "0x9"
+            ],
+            "spouse": "0x7",
+            "gender": "Male",
+            "district" :"Matara",
+	        "hobby" : "Gardening",
+	        "movie" : "Sinhala"
+        },
+        {
+            "uid": "0x7",
+            "family_id": "0x4",
+            "name": "Mangala Abeysundara",
+            "date_of_birth": "1963-08-11",
+            "profession": "Teacher",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x5",
+                "0x8",
+                "0x9"
+            ],
+            "spouse": "0x6",
+            "gender": "Female",
+            "district" :"Matara",
+	        "hobby" : "Gardening",
+	        "movie" : "Sinhala"
+        },
+        {
+            "uid": "0x8",
+            "family_id": "0x3",
+            "name": "Malindi Sooriyabandara",
+            "date_of_birth": "1994-09-10",
+            "profession": "Data Analysist",
+            "parents": {
+                "father": "0x6",
+                "mother": "0x7"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Female",
+            "district" :"Matara",
+	        "hobby" : "Reading books",
+	        "movie" : "English"
+        },
+        {
+            "uid": "0x9",
+            "family_id": "0x3",
+            "name": "Heshani Sooriyabandara",
+            "date_of_birth": "1997-09-10",
+            "profession": "Student",
+            "parents": {
+                "father": "0x6",
+                "mother": "0x7"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Female",
+            "district" :"Matara",
+	        "hobby" : "Watching films",
+	        "movie" : "Korean"
+        },
+        {
+            "uid": "0x10",
+            "family_id": "0x5",
+            "name": "Tharindima Sudasinghe",
+            "date_of_birth": "1998-10-01",
+            "profession": "Undergraduate",
+            "parents": {
+                "father": "0x11",
+                "mother": "0x12"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Female",
+            "district" :"Gampaha",
+	        "hobby" : "Reading books",
+	        "movie" : "Tamil"
+        },
+        {
+            "uid": "0x11",
+            "family_id": "0x5",
+            "name": "Sunera Sudasinghe",
+            "date_of_birth": "1976-05-20",
+            "profession": "Bussinessmen",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x10",
+                "0x13"
+            ],
+            "spouse": "0x12",
+            "gender": "Male",
+            "district" :"Gampaha",
+	        "hobby" : "Watching movies",
+	        "movie" : "Sinhala"
+        },
+        {
+            "uid": "0x12",
+            "family_id": "0x6",
+            "name": "Malmi Wickramasinghe",
+            "date_of_birth": "1976-12-29",
+            "profession": "Teacher",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x10",
+                "0x13"
+            ],
+            "spouse": "0x11",
+            "gender": "Female",
+            "district" :"Gampaha",
+	        "hobby" : "Gardening",
+	        "movie" : "Sinhala"
+        },
+        {
+            "uid": "0x13",
+            "family_id": "0x5",
+            "name": "Adithya Sudasinghe",
+            "date_of_birth": "2007-05-06",
+            "profession": "Student",
+            "parents": {
+                "father": "0x11",
+                "mother": "0x12"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Female",
+            "district" :"Gampaha",
+	        "hobby" : "Reading books",
+	        "movie" : "Tamil"
+        },
+        {
+            "uid": "0x14",
+            "family_id": "0x7",
+            "name": "Nethmi Pathirana",
+            "date_of_birth": "1997-10-02",
+            "profession": "Electrical Engineer",
+            "parents": {
+                "father": "0x15",
+                "mother": "0x16"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Female",
+            "district" :"Matara",
+	        "hobby" : "Watching films",
+	        "movie" : "Theligu"
+        },
+        {
+            "uid": "0x15",
+            "family_id": "0x7",
+            "name": "Thilakasiri Pathirana",
+            "date_of_birth": "1957-08-02",
+            "profession": "Surveyor",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x14",
+                "0x17"
+            ],
+            "spouse": "0x16",
+            "gender": "Male",
+            "district" :"Matara",
+	        "hobby" : "Reading newspapers",
+	        "movie" : "Sinhala"
+        },
+        {
+            "uid": "0x16",
+            "family_id": "0x8",
+            "name": "Thushari Yapa Abeywardana",
+            "date_of_birth": "1954-11-02",
+            "profession": "Doctor",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x14",
+                "0x17"
+            ],
+            "spouse": "0x15",
+            "gender": "Female",
+            "district" :"Matara",
+	        "hobby" : "Gardening",
+	        "movie" : "Sinhala"
+        },
+        {
+            "uid": "0x17",
+            "family_id": "0x7",
+            "name": "Chathumi Pathirana",
+            "date_of_birth": "1994-08-29",
+            "profession": "Software engineer",
+            "parents": {
+                "father": "0x15",
+                "mother": "0x16"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Female",
+            "district" :"Matara",
+	        "hobby" : "Watching movies",
+	        "movie" : "English"
+        },
+        
+        {
+            "uid": "0x18",
+            "family_id": "0x9",
+            "name": "Ashen Shanuka Rodrigo",
+            "date_of_birth": "1997-09-10",
+            "profession": "Electrical Engineer",
+            "parents": {
+                "father": "0x19",
+                "mother": "0x20"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Male",
+            "district" :"Kalutara",
+	        "hobby" : "Watching films",
+			"movie" : "English"
+        },
+        {
+            "uid": "0x19",
+            "family_id": "0x9",
+            "name": "Chandana Rodrigo",
+            "date_of_birth": "1965-05-29",
+            "profession": "Bussinessmen",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x18",
+                "0x21"
+            ],
+            "spouse": "0x20",
+            "gender": "Male",
+            "district" :"Kalutara",
+	        "hobby" : "Gardening",
+			"movie" : "Sinhala"
+        },
+        {
+            "uid": "0x20",
+            "family_id": "0x10",
+            "name": "Kumari Sanjeewani",
+            "date_of_birth": "1967-06-11",
+            "profession": "NONE",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x18",
+                "0x21"
+            ],
+            "spouse": "0x19",
+            "gender": "Female",
+            "district" :"Kalutara",
+	        "hobby" : "Watching films",
+			"movie" : "Sinhala"
+        },
+        {
+            "uid": "0x21",
+            "family_id": "0x9",
+            "name": "Asini Pankajani",
+            "date_of_birth": "2002-09-10",
+            "profession": "NONE",
+            "parents": {
+                "father": "0x19",
+                "mother": "0x20"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Female",
+            "district" :"kalutara",
+	        "hobby" : "Watching films",
+			"movie" : "English"
         }
+
     ]
 }
