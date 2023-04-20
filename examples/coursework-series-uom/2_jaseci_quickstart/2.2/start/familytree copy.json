@@ -1,0 +1,60 @@
+{
+    "families": [
+        {
+            "family_name": "Edirisinghe",
+            "id": "0x3"
+        },
+        {
+            "family_name": "Herath",
+            "id": "0x4"
+        }
+    ],
+    "members": [
+        {
+            "uid": "0x6",
+            "family_id": "0x3",
+            "name": "Chandra Edirisinghe",
+            "date_of_birth": "1999-03-10",
+            "profession": "civil Engineer",
+            "parents": {
+                "father": "0x7",
+                "mother": "0x8"
+            },
+            "deceased": false,
+            "children": [],
+            "spouse": null,
+            "gender": "Male"
+        },
+        {
+            "uid": "0x7",
+            "family_id": "0x3",
+            "name": "Surath Edirisinghe",
+            "date_of_birth": "1966-02-10",
+            "profession": "Mechanical Engineer",
+            "parents": null,
+            "deceased": true,
+            "children": [
+                "0x6"
+                
+            ],
+            "spouse": "0x8",
+            "gender": "Male"
+        },
+        {
+            "uid": "0x8",
+            "family_id": "0x4",
+            "name": "seetha herath",
+            "date_of_birth": "1969-03-10",
+            "profession": "Housewife",
+            "parents": null,
+            "deceased": false,
+            "children": [
+                "0x6"                
+            ],
+            "spouse": "0x7",
+            "gender": "Female"
+        }
+        
+        
+    ]
+}
