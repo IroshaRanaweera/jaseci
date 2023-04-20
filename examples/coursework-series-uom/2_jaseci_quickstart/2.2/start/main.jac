@@ -126,3 +126,49 @@ walker find_interest_in_Movies {
         report Movie_set;
     }
 }
+walker find_different_hobby {
+    // returns the different type of hobbies and list of people who are interested in that
+    has hobby_name_list = [];
+    has ppl_name_list =[];
+    has hobby_set =[];
+    has hobby_log ={};
+    has sub_list = [];
+    has c =0;
+    has count=0;
+    has i =0;
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        hobby_name_list.l::append(here.hobby);
+        count =count+1;
+        ppl_name_list.l::append(here.name);
+    }
+    with exit {
+        for hob_name in (hobby_name_list){
+            if (hob_name in hobby_set):c=c+1;
+            else:hobby_set.l::append(hob_name);
+        }
+        
+        for hob in hobby_set{
+            sub_list=[];
+            i=0;
+            while (i < count){
+                if(hobby_name_list[i]==hob){
+                    sub_list.l::append(ppl_name_list[i]);
+                }
+                i=i+1;
+
+            }
+            hobby_log[hob]= sub_list;
+
+        }
+
+
+        std.out(hobby_set);
+        std.out(hobby_log);
+        report hobby_log;
+        report hobby_set;
+    }
+
+}
