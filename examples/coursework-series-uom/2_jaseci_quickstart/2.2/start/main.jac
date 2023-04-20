@@ -250,3 +250,28 @@ walker find_age_grp {
     }
 
 }
+walker number_of_students{
+    // returns the number of student and there name of the family
+    has student = [];
+    has count = 0;
+    has std_dict = {};
+    
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        if (!here.deceased){
+            if (here.profession == "Student"){
+             student.l::append([here.name]);
+             count=count+1;
+             }
+        }
+    }
+    with exit {
+        std_dict["Student name list"]=student;
+        std_dict["Total number of student"]=count;
+        std.out(std_dict);
+        
+        report student;
+        }
+}
