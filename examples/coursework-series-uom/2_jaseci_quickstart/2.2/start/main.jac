@@ -81,3 +81,48 @@ walker find_coming_birthday {
         report birthday_order;
     }
 }
+walker find_interest_in_Movies {
+    // returns the fmovie type related to each people
+    has Movie_type_list = [];
+    has people_name_list =[];
+    has Movie_set =[];
+    has Movie_log ={};
+    has sub_list = [];
+    has c =0;
+    has count=0;
+    has i =0;
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        Movie_type_list.l::append(here.movie);
+        count =count+1;
+        people_name_list.l::append(here.name);
+    }
+    with exit {
+        for Movie_type in (Movie_type_list){
+            if (Movie_type in Movie_set):c=c+1;
+            else:Movie_set.l::append(Movie_type);
+        }
+        
+        for Movie in Movie_set{
+            sub_list=[];
+            i=0;
+            while (i < count){
+                if(Movie_type_list[i]==Movie){
+                    sub_list.l::append(people_name_list[i]);
+                }
+                i=i+1;
+
+            }
+            Movie_log[Movie]= sub_list;
+
+        }
+
+
+        std.out(Movie_set);
+        std.out(Movie_log);
+        report Movie_log;
+        report Movie_set;
+    }
+}
