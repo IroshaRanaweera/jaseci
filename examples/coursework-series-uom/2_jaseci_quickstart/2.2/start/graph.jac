@@ -39,6 +39,12 @@ node person {
         if (difference < 0) : difference = difference + 365;
         days_to_birthday = difference;
     }
+
+    can get_population_into_age_grp {
+        if (age < 15): age_group = "Children and Young Age";
+        elif(age < 65): age_group = "Working Age";
+        else: age_group = "Elderly Age";
+    }
 }
 node family_root {
     has id;

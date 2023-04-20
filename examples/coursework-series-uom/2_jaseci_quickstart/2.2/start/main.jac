@@ -172,3 +172,81 @@ walker find_different_hobby {
     }
 
 }
+
+walker same_district_people {
+    // returns the peoples in same district, list of district
+    has District_list = [];
+    has people_name =[];
+    has District =[];
+    has District_log ={};
+    has sub_list = [];
+    has c =0;
+    has count=0;
+    has i =0;
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        District_list.l::append(here.district);
+        count =count+1;
+        people_name.l::append(here.name);
+    }
+    with exit {
+        for disc in (District_list){
+            if (disc in District):c=c+1;
+            else:District.l::append(disc);
+        }
+        
+        for disc in District{
+            sub_list=[];
+            i=0;
+            while (i < count){
+                if(District_list[i]==disc){
+                    sub_list.l::append(people_name[i]);
+                }
+                i=i+1;
+
+            }
+            District_log[disc]= sub_list;
+
+        }
+
+
+        std.out(District);
+        std.out(District_log);
+        report District_log;
+        report District;
+    }
+}
+
+walker find_age_grp {
+    // returns the People details in each age group
+    has children_young_ppl = [];
+    has working_age_ppl =[];
+    has elderly_ppl =[];
+    has age_grp ={};
+
+   
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        
+        if (!here.deceased) {
+            here::get_age;
+            here::get_population_into_age_grp;
+            if (here.age < 15): children_young_ppl.l::append([here.age, here.name]);
+            elif(here.age < 65): working_age_ppl.l::append([here.age, here.name]);
+            else: elderly_ppl.l::append([here.age, here.name]);
+            
+        }
+    }
+    with exit {
+        age_grp["Children and Young Age"] = children_young_ppl;
+        age_grp["Working Age"] = working_age_ppl;
+        age_grp["Elderly Age"] = elderly_ppl;
+        std.out(age_grp);
+        report age_grp;
+    }
+
+}
